@@ -1,0 +1,35 @@
+App work flow. 
+
+1. File Upload
+
+2. General Analysis Section. 
+    1. Data columns
+    2. Data Shape
+    3. Data info
+    4. Sum of missing values. 
+    5. Count of missing numbers per column.
+    6. Sum of duplicates. 
+    7. Identifying Data types. Numerical or categorical. 
+    8. Counting number of unique variables
+    9. Checking for Datetime columns. Extracting year, month, day and others. 
+3. EDA
+    1. Data Visuals
+    2. Piecharts
+    3. Countplots
+    4. Multivariate Analysis
+    5. Univariate Analysis
+    6. Scatter plot. 
+    7. Histogram
+    8. Distribution plot. 
+4. Statistical analysis 
+    1. Correlation Check
+    2. 
+
+5. Report
+    All analysis made will be documented.
+    With the power of LLM, a nice and powerful report will be generated. 
+
+6. Chat
+    Chatting with Ai about your data.
+    Generating codes to help you perform your own analysis.
+    Displaying charts based on requests. 
