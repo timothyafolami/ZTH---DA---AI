@@ -33,3 +33,15 @@ App work flow.
     Chatting with Ai about your data.
     Generating codes to help you perform your own analysis.
     Displaying charts based on requests. 
+7.Data Cleaning and Preprocessing
+    1. Implement automated data cleaning algorithms to handle common data quality issues such as missing values, 
+    outliers, and inconsistencies.
+    2. Provide options for users to customize data cleaning steps based on their specific requirements and preferences.
+    3. Offer data preprocessing capabilities such as feature scaling, normalization, and encoding for machine learning tasks.
+
+8.More Visualizations.
+    1. Include more advanced visualization techniques such as heatmaps, pair plots, and box plots to explore relationships and 
+    patterns in the data.
+    2. Allow users to customize and interact with visualizations, such as filtering data subsets or adjusting plot 
+    parameters dynamically.
+    3. Provide interactive dashboards for users to create and save their own customized visualizations for future reference.
