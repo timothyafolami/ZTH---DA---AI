@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import tempfile
 from utils import *
-from ai_helper import get_comment
+from ai_helper import *
 
 # Set the page title and configuration
 st.set_page_config(
@@ -111,7 +111,13 @@ if file_uploader :
             st.write("### AI Comment")
             st.write(comment)
             # now checking if the data needs to be cleaned
-            
+            columns, missing, duplicated, numerical, outliers = data_cleaner_ass(df)
+            # creating text for this:
+            text = create_cleaner_text(columns, missing, duplicated, numerical, outliers)
+            # passing to ai to get answer
+            recommendation = cleaner_rec_ai(text)
+            st.write("### AI Cleaning Recommendation")
+            st.write(recommendation)
 
         elif selected_option == "More Visualizations":
             # Create more visualizations here

@@ -60,6 +60,8 @@ def unique_values(data):
     return data.nunique()
 
 def check_outliers(df, columns):
+    # Filtering the columns
+    columns = [col for col in columns if df[col].nunique() > 10]
     # Calculate the mean and standard deviation of the data
     means = df[columns].mean()
     stds = df[columns].std()

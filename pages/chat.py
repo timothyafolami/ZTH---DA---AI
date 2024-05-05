@@ -1,6 +1,11 @@
 import streamlit as st
-# from streamlit_chat import 
+from streamlit_chat import message
+
 
 st.title("Chat Page with you PDF file")
-st.write("This is the chat page.")
+
+
+INIT_MESSAGE = {"role": "assistant",
+                "content": "Hello! I'm Muchacha Orderbot. How may I help you?"}
+
 

@@ -46,6 +46,11 @@ def create_eda_text(unique, data_types, numerical, categorical, summary, correla
     text = f"The unique values in the data are {unique}. The data types of the columns are: {data_types}. The numerical columns in the data are {numerical}. The categorical columns in the data are {categorical}. The summary statistics of the data are {summary}. The correlation between the numerical columns is {correlation}. The percentage of outliers in the numerical columns are {outliers}."
     return text
 
+# creating text for the data cleaner
+def create_cleaner_text(columns, missing, duplicated, numerical, outliers):
+    text = f"These are the columns in the data {columns}.\nThe total missing values in the data is {missing}.\nThere are {duplicated} duplicates in the data.\nThe numerical features in the data include {numerical}.\nThe table below shows the outliers in the data: \n{outliers}"
+    return text
+
 # Setting up the things I want in general analysis
 # Data Shape, columns in the data ,sum of missing values, sum of duplicated values
 def general_analysis(data):
@@ -65,3 +70,12 @@ def EDA_analysis(data):
     correlation = correlation_check(data, numerical)
     outliers = check_outliers(data, numerical)
     return unique, data_types, numerical, categorical, summary, correlation, outliers
+
+# creating a cleaning assistant
+def data_cleaner_ass(data):
+    columns = data.columns
+    missing = sum_missing_values(data)
+    duplicated = sum_duplicates(data)
+    numerical = numerical_columns(data)
+    outliers = check_outliers(data, numerical)
+    return columns, missing, duplicated, numerical, outliers

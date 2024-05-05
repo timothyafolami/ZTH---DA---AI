@@ -35,3 +35,16 @@ def get_topic_answer(input: str) -> str:
     topic_dis = chain.invoke({"text": {input}})
     return topic_dis.content
 
+def cleaner_rec_ai(input: str) -> str:
+    # chat prompt
+    system = '''You are a Lead Data Scientist with about 10 years of experience.
+        You are receiving a report from your team member about the data they have been working on.
+        You are to give them recommendations on how to clean the data. If the data is clean tell them it is clean.
+        Give best practices always. Don't rush to answer. 
+                '''
+    human = "{text}"
+    prompt = ChatPromptTemplate.from_messages([("system", system), ("human", human)])
+
+    chain = prompt | chat
+    topic_dis = chain.invoke({"text": {input}})
+    return topic_dis.content
